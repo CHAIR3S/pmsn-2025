@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/game_hero.dart';
+import '../theme/app_theme.dart';
 
 class DetailsPage extends StatelessWidget {
   final GameHero hero;
@@ -14,11 +15,7 @@ class DetailsPage extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Color(0xFFF4E342), Color(0xFFEE3474)],
-            begin: Alignment(0.3, -1),
-            end: Alignment(-0.8, 1),
-          ),
+          gradient: AppTheme.bgGradient,
         ),
         child: Stack(
           children: [

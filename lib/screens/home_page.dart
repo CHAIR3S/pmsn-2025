@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/game_hero.dart';
 import '../widgets/item_row.dart';
 import 'details_page.dart';
+import '../theme/app_theme.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -10,11 +11,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [Color(0xFFF4E342), Color(0xFFEE3474)],
-          begin: Alignment(0.3, -1),
-          end: Alignment(-0.8, 1),
-        ),
+        gradient: AppTheme.bgGradient,
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
