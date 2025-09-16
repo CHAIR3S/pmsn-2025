@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pmsn20252/screens/home_screen.dart';
 import 'package:pmsn20252/screens/login_screen.dart';
+import 'package:pmsn20252/screens/register_screen.dart';
 import 'package:pmsn20252/utils/theme_app.dart';
 import 'package:pmsn20252/utils/value_listener.dart';
 
@@ -15,14 +16,16 @@ class MyApp extends StatelessWidget {
       valueListenable: ValueListener.isDark,
       builder: (context, value, _) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           theme: value ? ThemeApp.darkTheme() : ThemeApp.lightTheme(),
           routes: {
-            "/home" : (context) => HomeScreen()
-          },  
+            '/home': (context) => const HomeScreen(),
+            '/register': (context) => const RegisterScreen(),
+          },
           title: 'Material App',
-          home: LoginScreen(),
+          home: const LoginScreen(),
         );
-      }
+      },
     );
   }
 }
