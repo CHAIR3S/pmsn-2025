@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # programación móvil y servicios en la nube
 
 A new Flutter project.
